@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 
 function App() {
-  console.log(import.meta.env.VITE_API_KEY);
   return (
     <Grid
       templateAreas={{
