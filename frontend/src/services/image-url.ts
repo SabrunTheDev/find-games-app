@@ -1,5 +1,6 @@
 import imagePlaceHolder from "../assets/image-placeholder.webp";
 
+// Handles image resolution
 const getCroppedImageUrl = (url: string) => {
   if (!url) return imagePlaceHolder;
   const target = "media/";
