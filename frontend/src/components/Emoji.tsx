@@ -1,7 +1,7 @@
 import bullsEye from "../assets/bulls-eye.webp";
 import thumbsUp from "../assets/thumbs-up.webp";
 import meh from "../assets/meh.webp";
-import { Box, Image, ImageProps } from "@chakra-ui/react";
+import { Image, ImageProps } from "@chakra-ui/react";
 
 interface Props {
   rating: number;
@@ -16,11 +16,7 @@ const Emoji = ({ rating }: Props) => {
     5: { src: bullsEye, alt: "exceptional", boxSize: "30px" },
   };
 
-  return (
-    <Box position="absolute" right={1} paddingX={4}>
-      <Image {...emojiMap[rating]} />
-    </Box>
-  );
+  return <Image {...emojiMap[rating]} marginTop={1} />;
 };
 
 export default Emoji;

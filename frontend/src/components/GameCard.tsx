@@ -11,17 +11,17 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card overflow="hidden">
+    <Card>
       <Image src={getCoppedImgUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
           <PlatformIconsList
-            platforms={game.parent_platforms.map((p) => p.platform)}
+            platforms={game.parent_platforms?.map((p) => p.platform)}
           />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <HStack>
-          <Heading fontSize={"2xl"}>{game.name}</Heading>
+        <HStack justifyContent="space-between">
+          <Heading fontSize="2xl">{game.name}</Heading>
           <Emoji rating={game.rating_top} />
         </HStack>
       </CardBody>
