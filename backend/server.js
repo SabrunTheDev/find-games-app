@@ -13,7 +13,7 @@ const gamesRoute = require("./routes/gamesRoute");
 app.use("/api", gamesRoute);
 
 const genresRoute = require("./routes/genresRoute");
-app.use("/", genresRoute);
+app.use("/api", genresRoute);
 
 async function startApp() {
   await connectToMongoDB("games");
